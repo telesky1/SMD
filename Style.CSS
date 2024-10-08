@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  width: 90%;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  display: none;
+  /* 初始隐藏容器 */
+}
+
+.image-container {
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  color: #d3d3d3;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 30px;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+  transform: scale(1.5);
+}
+
+.radio-group label {
+  font-size: 3vw;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .radio-group label {
+    font-size: initial;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  /* 保证子元素在垂直方向上保持一致高度 */
+  margin-top: 10px;
+  width: 100%;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  /* 使输入框占据更多的宽度 */
+  padding: 10px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  height: 100%;
+  /* 保证输入框高度一致 */
+}
+
+button#purchaseButton {
+  flex-shrink: 0;
+  /* 防止按钮缩小 */
+  padding: 0 15px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  min-height: 100%;
+  /* 保证按钮的最小高度和输入框保持一致 */
+}
+
+button#purchaseButton:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+
+  input[type="text"],
+  button#purchaseButton {
+    font-size: 4vw;
+    /* 在小屏幕上自动调整字体大小 */
+  }
+}
+
+
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 1.5vw;
+  color: #333;
+}

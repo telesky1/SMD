@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>贴片电阻印字计算器</title>
+  <link rel="icon" href="../图片素材/天士凯LOGO.png" type="image/png">
+  <link rel="stylesheet" href="Style.CSS">
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div class="image-container">
+      <a href="https://telesky.tmall.com/index.htm?spm=a1z10.3-b-s.w5002-25323366131.2.5a243d6c18dPXV" target="_blank">
+        <img src="../图片素材/贴片电阻.png" alt="方形图片" id="image">
+      </a>
+      <div class="number" id="number"></div>
+    </div>
+
+    <div class="radio-group">
+      <div>
+        <input type="radio" name="resistorType" value="3" id="type3" checked>
+        <label for="type3">3位编码</label>
+      </div>
+      <div>
+        <input type="radio" name="resistorType" value="4" id="type4">
+        <label for="type4">4位编码</label>
+      </div>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="inputField" placeholder="输入印字" autocomplete="off">
+      <button id="purchaseButton"
+        onclick="window.location.href='https://telesky.tmall.com/?spm=a1z10.3-b-s.w12007714-25323777466.1.5a753d6cJuTQ7t'">去选购</button>
+    </div>
+
+    <div class="result" id="result">阻值: </div>
+  </div>
+
+  <script src="Script.js"></script>
+</body>
+
+</html>
